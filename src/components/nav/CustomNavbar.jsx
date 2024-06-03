@@ -1,14 +1,14 @@
 import { Nav, Navbar, Button, Container, Form, NavDropdown, Offcanvas } from 'react-bootstrap';
-import LogoImage from '../assets/1finstop_logo_1.svg';
+import LogoImage from '../../assets/1FinStop_transparent.png';
 
-function OffcanvasExample() {
+function CustomNavbar() {
   return (
     <>
       {[false].map((expand) => (
         <Navbar bg="success" variant="dark" key={expand} expand={expand} >
           <Container fluid>
             <Navbar.Brand href="#">
-              <svg src={LogoImage}></svg>
+            <img src={LogoImage} alt="1FinStop Logo" style={{ width: '10%' }} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -57,4 +57,4 @@ function OffcanvasExample() {
   );
 }
 
-export default OffcanvasExample;
+export default CustomNavbar;
